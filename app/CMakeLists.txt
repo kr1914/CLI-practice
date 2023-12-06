@@ -5,3 +5,6 @@ file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
 
 add_executable(program ${SRC_FILES})
 target_link_libraries(program PUBLIC shape)
+target_link_libraries(program PUBLIC ${OpenCV_LIBS})
+# shape 에 링크
+target_link_libraries(program PRIVATE fmt)
